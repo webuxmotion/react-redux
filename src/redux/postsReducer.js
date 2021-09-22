@@ -1,4 +1,4 @@
-import { CREATE_POST, FETCH_POSTS } from "./types";
+import { CREATE_POST, SAVE_POSTS } from "./types";
 
 const initialState = {
     posts: [],
@@ -12,7 +12,7 @@ const postsReducer = (state = initialState, action) => {
                 ...state,
                 posts: [...state.posts, action.payload]
             };
-        case FETCH_POSTS:
+        case SAVE_POSTS:
             return {
                 ...state,
                 fetchedPosts: action.payload
