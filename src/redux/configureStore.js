@@ -11,6 +11,7 @@ import { sagaWatcher } from './sagas'
 const persistConfig = {
     key: 'root',
     storage,
+    blacklist: ['posts']
 }
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
